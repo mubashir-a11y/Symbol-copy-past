@@ -1,0 +1,392 @@
+.page { min-height: 100vh; }
+
+.hero {
+  text-align: center;
+  padding: var(--space-16) var(--space-6) var(--space-8);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-3);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ===== Builder ===== */
+.builderSection { padding: var(--space-12) 0; }
+
+.builder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.builderStep {}
+
+.stepLabel {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.letterGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.letterBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  color: var(--text-primary);
+}
+
+.letterBtn:hover:not(.letterDisabled) {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.letterActive {
+  background: var(--accent-primary) !important;
+  color: white !important;
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3) !important;
+}
+
+.letterDisabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.accentGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.accentBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-5);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-width: 80px;
+}
+
+.accentBtn:hover:not(.accentDisabled) {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+}
+
+.accentActive {
+  background: rgba(99, 102, 241, 0.15) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+.accentDisabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.accentSymbol {
+  font-size: var(--text-xl);
+  line-height: 1;
+}
+
+.accentName {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 0.08em;
+}
+
+/* ===== Result ===== */
+.resultArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.resultCards {
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+}
+
+.resultCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-8) var(--space-10);
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  transition: all var(--transition-base);
+}
+
+.resultCopied {
+  border-color: var(--success) !important;
+  background: var(--success-bg) !important;
+}
+
+.resultChar {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.resultLabel {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.resultActions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== Keyboard Section ===== */
+.keyboardSection {
+  padding: var(--space-16) 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.collector {
+  max-width: 600px;
+  margin: var(--space-8) auto var(--space-8);
+}
+
+.collectorInput {
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  font-family: var(--font-sans);
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--transition-base);
+}
+
+.collectorInput:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.collectorInput::placeholder {
+  color: var(--text-tertiary);
+}
+
+.collectorActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.filterRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filterLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  letter-spacing: 0.1em;
+  min-width: 70px;
+  padding-top: var(--space-2);
+}
+
+.filterPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.charGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: var(--space-2);
+  max-width: 900px;
+  margin: var(--space-6) auto 0;
+}
+
+.charBtn {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  color: var(--text-primary);
+}
+
+.charBtn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-glow);
+}
+
+.charCopied {
+  border-color: var(--success) !important;
+  background: var(--success-bg) !important;
+}
+
+.noChars {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: var(--space-8) 0;
+  font-size: var(--text-sm);
+}
+
+/* ===== How To ===== */
+.howTo { padding: var(--space-16) 0; }
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 500px;
+  margin: var(--space-8) auto 0;
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 48px;
+  bottom: 48px;
+  width: 2px;
+  background: var(--border-default);
+}
+
+.step {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  position: relative;
+}
+
+.stepNum {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gradient);
+  color: white;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  border-radius: var(--radius-full);
+  position: relative;
+  z-index: 1;
+}
+
+.step h3 { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-1); }
+.step p { font-size: var(--text-sm); color: var(--text-secondary); line-height: var(--leading-relaxed); }
+
+/* ===== FAQ Grid ===== */
+.faqSection {
+  padding: var(--space-16) 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.faqCard {
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  transition: border-color var(--transition-base);
+}
+
+.faqCard:hover { border-color: var(--border-default); }
+
+.faqIcon {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+}
+
+.faqQuestion {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-tight);
+}
+
+.faqAnswer {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 768px) {
+  .title { font-size: var(--text-2xl); }
+  .resultCards { flex-direction: column; align-items: center; }
+  .resultCard { padding: var(--space-6) var(--space-8); }
+  .resultChar { font-size: 40px; }
+  .filterRow { flex-direction: column; gap: var(--space-2); }
+  .filterLabel { min-width: auto; padding-top: 0; }
+  .charGrid { grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); }
+}

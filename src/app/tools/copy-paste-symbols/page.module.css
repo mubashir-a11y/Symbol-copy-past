@@ -1,0 +1,284 @@
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: var(--space-16) var(--space-6) var(--space-8);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.title {
+  font-size: var(--text-4xl);
+  font-weight: 900;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-3);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.searchSection {
+  padding: var(--space-8) var(--space-6) var(--space-4);
+}
+
+.filtersSection {
+  padding: 0 var(--space-6) var(--space-6);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.filtersScroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.gridSection {
+  padding: 0 0 var(--space-12);
+}
+
+.resultCount {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+.loadMore {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-16) 0;
+  color: var(--text-tertiary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* ===== Popular Section ===== */
+.popularSection {
+  padding: var(--space-16) 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.popularGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--space-4);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.popularCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.popularCard:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.popularCopied {
+  border-color: var(--success) !important;
+  background: var(--success-bg) !important;
+}
+
+.popularChar {
+  font-size: var(--text-3xl);
+  line-height: 1;
+}
+
+.popularName {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ===== How To Section ===== */
+.howToSection {
+  padding: var(--space-16) 0;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 48px;
+  bottom: 48px;
+  width: 2px;
+  background: var(--border-default);
+}
+
+.step {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  position: relative;
+}
+
+.stepNumber {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gradient);
+  color: white;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  border-radius: var(--radius-full);
+  position: relative;
+  z-index: 1;
+}
+
+.stepTitle {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.stepDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ===== FAQ ===== */
+.faqSection {
+  padding: var(--space-16) 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ===== Modal ===== */
+.modalClose {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--text-lg);
+}
+
+.modalClose:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.modalSymbol {
+  font-size: 72px;
+  text-align: center;
+  padding: var(--space-6) 0;
+  line-height: 1;
+}
+
+.modalName {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.modalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.modalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+}
+
+.modalLabel {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.modalValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.modalActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.modalActions .btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--text-2xl);
+  }
+
+  .popularGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--space-3);
+  }
+
+  .popularCard {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .popularChar {
+    font-size: var(--text-2xl);
+  }
+}
