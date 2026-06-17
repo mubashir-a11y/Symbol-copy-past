@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description:
       "Copy symbols with one click or find keyboard shortcuts for Windows, Mac, Word, and Google Docs.",
   },
+  verification: {
+    google: "arqqUux276T0lBX3HHjMWSocV-8h-4dL7JA58N6UHrM",
+  },
   robots: {
     index: true,
     follow: true,
